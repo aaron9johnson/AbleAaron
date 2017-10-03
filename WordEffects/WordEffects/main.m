@@ -51,6 +51,19 @@ int main(int argc, const char * argv[]) {
                 inputString = [inputString stringByReplacingOccurrencesOfString:@" "
                                                  withString:@"-"];
                 break;
+            case 7:
+                //wordCount
+                printf("number of words: %lu\n", (unsigned long)[[inputString componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] count]);
+                break;
+            case 8:
+                //punctuation Removal
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"!"
+                                                                     withString:@""];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"?"
+                                                                     withString:@""];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"."
+                                                                     withString:@""];
+                break;
                 
             default:
                 break;
